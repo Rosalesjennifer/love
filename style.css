@@ -1,749 +1,119 @@
-/* General Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    margin: 0;
     font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(135deg, #d8cfe8 0%, #c5dff8 50%, #d8cfe8 100%);
-    color: #4a4a4a;
-    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
 }
 
-/* Password Protection Page */
+/* PASSWORD PAGE */
 .password-page {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #d8cfe8 0%, #c5dff8 50%, #d8cfe8 100%);
-    padding: 20px;
-}
-
-.password-container {
-    background: linear-gradient(135deg, #f5f0ff 0%, #f0f8ff 100%);
-    padding: 50px 40px;
-    border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(107, 114, 180, 0.2);
-    border: 2px solid rgba(139, 126, 200, 0.2);
-    max-width: 450px;
-    width: 100%;
     text-align: center;
 }
 
-.password-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
-    background: linear-gradient(135deg, #8b7ec8 0%, #6fa3d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 15px;
+.password-container {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
 }
 
-.password-subtitle {
-    color: #6b72b4;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-
-.password-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.password-input {
-    padding: 15px 20px;
-    border: 2px solid #d8cfe8;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-family: 'Quicksand', sans-serif;
-    transition: all 0.3s ease;
-    background-color: #ffffff;
-    color: #4a4a4a;
-}
-
-.password-input:focus {
-    outline: none;
-    border-color: #8b7ec8;
-    box-shadow: 0 0 15px rgba(139, 126, 200, 0.3);
-}
-
-.password-btn {
-    padding: 15px 30px;
-    background: linear-gradient(135deg, #8b7ec8 0%, #6fa3d4 100%);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(107, 114, 180, 0.3);
-}
-
-.password-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(107, 114, 180, 0.4);
-}
-
-.password-btn:active {
-    transform: translateY(-1px);
-}
-
-.password-hint {
-    background: rgba(139, 126, 200, 0.1);
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    border-left: 4px solid #8b7ec8;
-}
-
-.password-hint p {
-    color: #6b72b4;
-    font-size: 0.95rem;
-}
-
-.error-message {
-    color: #e74c3c;
-    font-size: 0.9rem;
-    min-height: 20px;
+input {
+    padding: 10px;
     margin-top: 10px;
-    font-weight: 500;
-}
-
-/* Dashboard */
-.dashboard {
-    min-height: 100vh;
-}
-
-/* Navigation Bar */
-.navbar {
-    background: linear-gradient(135deg, #8b7ec8 0%, #6fa3d4 100%);
-    padding: 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 5px 20px rgba(107, 114, 180, 0.3);
-}
-
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.nav-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 10px 20px;
+    width: 80%;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    border: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #4cc9f0;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    position: relative;
 }
 
-.nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background: rgba(0,0,0,0.4);
 }
 
-.nav-link.active {
-    background-color: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
-    transform: translateY(-3px);
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Sections */
+nav a:hover {
+    color: #4cc9f0;
+}
+
+/* SECTIONS */
 .section {
     display: none;
-    min-height: calc(100vh - 80px);
-    padding: 60px 20px;
-    animation: fadeIn 0.5s ease-in;
+    padding: 40px;
+    text-align: center;
 }
 
 .section.active {
     display: block;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #f5f0ff 0%, #f0f8ff 100%);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(107, 114, 180, 0.15);
-    border: 2px solid rgba(139, 126, 200, 0.2);
-}
-
-/* Home Section */
-#home header h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3.5rem;
-    background: linear-gradient(135deg, #8b7ec8 0%, #6fa3d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.heartfelt-message {
-    font-size: 1.2rem;
-    color: #6b72b4;
-    line-height: 1.8;
-    text-align: center;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
-
-/* Bible Verse */
-.bible-verse {
-    background: linear-gradient(135deg, #f8f3ff 0%, #f3f9ff 100%);
-    padding: 30px;
-    border-radius: 15px;
-    border-left: 5px solid #8b7ec8;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 15px rgba(107, 114, 180, 0.1);
-}
-
-.verse-text {
-    color: #6b72b4;
-    font-size: 1.05rem;
-    line-height: 1.9;
+/* HOME */
+.verse {
+    margin: 20px 0;
     font-style: italic;
-    margin-bottom: 15px;
 }
 
-.verse-reference {
-    color: #8b7ec8;
-    font-weight: 600;
-    text-align: right;
-}
-
-/* Cute Cats Section */
-.cute-cats {
-    margin-top: 40px;
-}
-
-.cute-cats h3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.8rem;
-    color: #8b7ec8;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.cats-gallery {
+/* GALLERY */
+.gallery, .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.cat-card {
-    overflow: hidden;
-    border-radius: 15px;
-    border: 3px solid #c5dff8;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(107, 114, 180, 0.1);
-    height: 250px;
-}
-
-.cat-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(107, 114, 180, 0.2);
-    border-color: #8b7ec8;
-}
-
-.cat-card img {
+img, video {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.cat-card:hover img {
-    transform: scale(1.05);
-}
-
-/* Section Headings */
-.section h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.8rem;
-    background: linear-gradient(135deg, #8b7ec8 0%, #6fa3d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* Memories Section */
-.memories-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.memory-card {
-    background: linear-gradient(135deg, #f8f3ff 0%, #f3f9ff 100%);
-    padding: 25px;
-    border-radius: 20px;
-    border: 2px solid #d8cfe8;
-    box-shadow: 0 8px 25px rgba(107, 114, 180, 0.12);
-    transition: all 0.3s ease;
-    overflow: hidden;
-}
-
-.memory-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(107, 114, 180, 0.2);
-    border-color: #c5dff8;
-}
-
-.memory-image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    background: linear-gradient(135deg, #e6e0f5 0%, #dce9ff 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.memory-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.memory-card:hover .memory-image img {
-    transform: scale(1.05);
-}
-
-.memory-card h3 {
-    color: #8b7ec8;
-    margin-bottom: 12px;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
-.memory-card p {
-    color: #6b72b4;
-    line-height: 1.7;
-    font-size: 0.95rem;
-}
-
-/* Video Gallery Section */
-.gallery-subtitle {
-    text-align: center;
-    color: #6b72b4;
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-}
-
-.video-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-.video-card {
-    background: linear-gradient(135deg, #f8f3ff 0%, #f3f9ff 100%);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 2px solid #d8cfe8;
-    box-shadow: 0 8px 25px rgba(107, 114, 180, 0.12);
-    transition: all 0.3s ease;
-}
-
-.video-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(107, 114, 180, 0.2);
-    border-color: #c5dff8;
-}
-
-.video-container {
-    width: 100%;
-    height: 250px;
-    background: #000;
-    position: relative;
-    overflow: hidden;
-}
-
-.video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.video-title {
-    padding: 15px;
-    color: #8b7ec8;
-    font-weight: 600;
-    text-align: center;
-    font-size: 1.05rem;
-}
-
-.gallery-note {
-    text-align: center;
-    color: #6b72b4;
-    font-size: 0.95rem;
-    font-style: italic;
-    padding: 15px;
-    background: rgba(139, 126, 200, 0.05);
     border-radius: 10px;
-    border-left: 4px solid #8b7ec8;
 }
 
-/* Message Section */
-.love-letter {
-    background: linear-gradient(135deg, #f8f3ff 0%, #f3f9ff 100%);
-    padding: 40px;
-    border-radius: 20px;
-    border: 2px solid #d8cfe8;
-    box-shadow: 0 8px 25px rgba(107, 114, 180, 0.12);
+/* LETTER */
+.letter {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
     text-align: left;
-    line-height: 2;
+    max-width: 700px;
+    margin: auto;
 }
 
-.love-letter p {
-    color: #6b72b4;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-}
-
-.signature {
-    margin-top: 30px;
-    font-style: italic;
-    color: #8b7ec8;
-    font-weight: 500;
-}
-
-.signature-name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.8rem;
-    color: #8b7ec8;
-    font-weight: 600;
-}
-
-/* Reasons Section */
-.reasons-grid {
+/* REASONS */
+.reasons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
 }
 
-.reason-card {
-    background: linear-gradient(135deg, #f8f3ff 0%, #f3f9ff 100%);
-    padding: 30px 25px;
-    border-radius: 18px;
-    border: 2px solid #d8cfe8;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(107, 114, 180, 0.12);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.reasons div {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.reason-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(107, 114, 180, 0.2);
-    border-color: #c5dff8;
-}
-
-.reason-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #8b7ec8 0%, #6fa3d4 100%);
-    color: white;
-    border-radius: 50%;
-    font-weight: bold;
-    font-size: 1.8rem;
-    font-family: 'Dancing Script', cursive;
-    box-shadow: 0 5px 15px rgba(107, 114, 180, 0.3);
-}
-
-.reason-card p {
-    color: #6b72b4;
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-/* Heart Animation */
-.heart {
-    display: inline-block;
-    animation: heartbeat 1.5s ease-in-out infinite;
-    color: #8b7ec8;
-}
-
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    15% { transform: scale(1.3); }
-    30% { transform: scale(1); }
-    45% { transform: scale(1.15); }
-    60% { transform: scale(1); }
-}
-
-/* Footer */
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 30px 20px;
-    color: #8b7ec8;
-    font-size: 1.05rem;
-    background: linear-gradient(135deg, rgba(139, 126, 200, 0.05) 0%, rgba(111, 163, 212, 0.05) 100%);
-    font-weight: 500;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .password-container {
-        padding: 40px 25px;
-    }
-
-    .password-title {
-        font-size: 2rem;
-    }
-
-    .password-subtitle {
-        font-size: 1rem;
-    }
-
-    .nav-links {
-        gap: 10px;
-    }
-
-    .nav-link {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-
-    .section {
-        padding: 40px 15px;
-        min-height: auto;
-    }
-
-    .container {
-        padding: 25px;
-    }
-
-    #home header h1 {
-        font-size: 2.2rem;
-    }
-
-    .section h2 {
-        font-size: 2rem;
-    }
-
-    .cats-gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .cat-card {
-        height: 200px;
-    }
-
-    .memories-content {
-        grid-template-columns: 1fr;
-    }
-
-    .video-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .video-container {
-        height: 200px;
-    }
-
-    .reasons-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .bible-verse {
-        padding: 20px;
-    }
-
-    .verse-text {
-        font-size: 0.95rem;
-    }
-
-    .love-letter {
-        padding: 25px;
-        line-height: 1.7;
-    }
-
-    .love-letter p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .password-container {
-        padding: 30px 20px;
-    }
-
-    .password-title {
-        font-size: 1.8rem;
-    }
-
-    .password-input {
-        padding: 12px 15px;
-        font-size: 0.95rem;
-    }
-
-    .password-btn {
-        padding: 12px 20px;
-        font-size: 1rem;
-    }
-
-    .nav-links {
-        gap: 5px;
-        flex-direction: column;
-    }
-
-    .nav-link {
-        font-size: 0.85rem;
-        padding: 6px 10px;
-    }
-
-    #home header h1 {
-        font-size: 1.8rem;
-    }
-
-    .section h2 {
-        font-size: 1.6rem;
-    }
-
-    .heartfelt-message {
-        font-size: 1rem;
-    }
-
-    .cats-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .cat-card {
-        height: 180px;
-    }
-
-    .memory-image {
-        height: 180px;
-    }
-
-    .video-gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .video-container {
-        height: 180px;
-    }
-
-    .reasons-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .reason-number {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-    }
-
-    .reason-card p {
-        font-size: 0.9rem;
-    }
-
-    .bible-verse {
-        padding: 15px;
-    }
-
-    .verse-text {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-
-    .love-letter {
-        padding: 15px;
-        line-height: 1.6;
-    }
-
-    .love-letter p {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-    }
-
-    .signature-name {
-        font-size: 1.5rem;
-    }
-
-    .cute-cats h3 {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 360px) {
-    .password-container {
-        padding: 25px 15px;
-    }
-
-    .password-title {
-        font-size: 1.5rem;
-    }
-
-    .nav-link {
-        font-size: 0.75rem;
-        padding: 5px 8px;
-    }
-
-    #home header h1 {
-        font-size: 1.5rem;
-    }
-
-    .section h2 {
-        font-size: 1.4rem;
-    }
+    padding: 20px;
+    opacity: 0.7;
 }

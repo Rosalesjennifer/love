@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary My Love</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Password Protection Page -->
+    <div id="passwordPage" class="password-page">
+        <div class="password-container">
+            <h1 class="password-title">💜 Special Access 💙</h1>
+            <p class="password-subtitle">Enter the password to unlock our special memories</p>
+            
+            <div class="password-form">
+                <input type="password" id="passwordInput" class="password-input" placeholder="Enter password">
+                <button onclick="checkPassword()" class="password-btn">Unlock</button>
+            </div>
+            
+            <div class="password-hint">
+                <p><strong>Hint:</strong> A special day of ours 📅</p>
+            </div>
+            
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard (Hidden until password is correct) -->
+    <div id="dashboard" class="dashboard" style="display: none;">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link" onclick="showSection('home', event)">Home</a></li>
+                    <li><a href="#memories" class="nav-link" onclick="showSection('memories', event)">Memories</a></li>
+                    <li><a href="#gallery" class="nav-link" onclick="showSection('gallery', event)">Gallery</a></li>
+                    <li><a href="#message" class="nav-link" onclick="showSection('message', event)">Message</a></li>
+                    <li><a href="#reasons" class="nav-link" onclick="showSection('reasons', event)">Reasons</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <header>
+                    <h1>Happy Monthsary My Love</h1>
+                    <p class="heartfelt-message">Every day with you is a blessing. I'm so happy we've reached another month together. Here's to many more!</p>
+                </header>
+
+                <!-- Bible Verse -->
+                <div class="bible-verse">
+                    <p class="verse-text">"I have found the one whom my soul loves."</p>
+                    <p class="verse-reference">—Song of Solomon 3:4</p>
+                </div>
+
+                <!-- Cute Cats Section -->
+                <div class="cute-cats">
+                    <h3>Our Cute Companions 🐱</h3>
+                    <div class="cats-gallery">
+                        <div class="cat-card">
+                            <img src="1.jpg" alt="Cute Cat 1">
+                        </div>
+                        <div class="cat-card">
+                            <img src="3.jpg" alt="Cute Cat 3">
+                        </div>
+                        <div class="cat-card">
+                            <img src="2.jpg" alt="Cute Cat 2">
+                        </div>
+                        <div class="cat-card">
+                            <img src="4.jpg" alt="Cute Cat 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Memories Section -->
+        <section id="memories" class="section">
+            <div class="container">
+                <h2>Our Memories for this Month</h2>
+                <div class="memories-content">
+                    <div class="memory-card">
+                        <div class="memory-image">
+                            <img src="a.jpg">
+                        </div>
+                
+                    <div class="memory-card">
+                        <div class="memory-image">
+                            <img src="c.jpg">
+                        </div>
+                       
+                    <div class="memory-card">
+                        <div class="memory-image">
+                            <img src="b.jpg">
+                        </div>
+                       
+                    <div class="memory-card">
+                        <div class="memory-image">
+                            <img src="d.jpg">
+                        </div>
+                    <div class="memory-card">
+                        <div class="memory-image">
+                            <img src="e.jpg">
+                        </div>
+                       
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section (Videos with Animation) -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Video Gallery</h2>
+                <p class="gallery-subtitle">Enjoy our special moments in motion</p>
+                <div class="video-gallery">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="L.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="video-title"></p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="o.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="video-title"></p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="v.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="video-title"></p>
+                    </div>
+                     <div class="video-card">
+                        <div class="video-container">
+                            <video controls>
+                                <source src="oo.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p class="video-title"></p>
+                    </div>
+                </div>
+                <p class="gallery-note"></p>
+            </div>
+        </section>
+
+        <!-- Message Section -->
+        <section id="message" class="section">
+            <div class="container">
+                <h2>A Letter From My Heart</h2>
+                <div class="love-letter">
+                    <p>
+                        My Dearest,
+                    </p>
+                    <p>
+                   Happy 16th monthsary, my lovelove 🥺💙
+
+16 months na ta, pero murag every day gihapon feels like the first time nga na inlove ko nimo. from our first moments together, sa atong mga sinongogay, random chikas, late night talks, and even our small fights tanan na nahimo nato na memories akong i treasure forever. every laugh, every hug, every “I love you,” nag-build sa kung unsa ta karon.
+
+grabe kaayo ko ka thankful nga ikaw akong kauban ani nga journey. sa tinuod lang, wala na koy lain gusto ilailahon pa love. ikaw ra jud akong gipili, og padayon ko mupili nimo every single day. ikaw akong standard, na kung dili ikaw dili pud ko and wala nay makalabaw pa nimo sa akong mata og sa akong heart love HAHAH cringeee man paminawon pero thats the truth. you are everything i prayed for, and even more than that.
+
+i hope we continue choosing each other until the end, love. maski unsa pa atong maagian, i know we’ll get through it together. because with you, i found not just love, but peace, comfort, and a home.
+
+every day, i admire you more. dili jud ko mapul-an nimo, love. aach day, i fall deeper and deeper in love with you sa imong smile, sa imong pagka caring, sa imong pagka pretty, and pagka ikaw and sa tanan. you make my world brighter without even trying.
+
+thank you for staying, love. thank you for being patient with me, for understanding me even when lisod ko sabton, and for loving me despite my flaws. i know naa koy times nga gahi kog ulo og magka misunderstand ta, and for that, im sorry, love. but I promise i will always try to be better for you and for us.
+
+as we continue to grow and slowly achieve our goals, i’m so happy nga naa ra gihapon ta duha, magkauban, nagtinabangay, and win in life together. i’m excited sa future nato the dreams we’ll reach, the memories we’ll create, and the life we’ll build hand in hand.
+
+love, hapit najud ko mo graduate days nalang ang ginahuwat. dili jud nako ni maabot kung wala imong help, care, ug pag motivate. dako kaayo akong pasalamat sa imoha. thank you kaayo, love, nga naa ka, nga niabot ka sa akoa in the most unexpected way gift jud ka ni Lord sa akong life.
+
+forever grateful jud ko nga naa ka sa akong life. thank you for everything you’ve done, for loving me the way you do. i appreciate you more than words can ever express.
+
+ikaw ra jud, always. I love you so much, lovelove 🤍
+                    </p>
+                    <p class="signature">Forever Yours,</p>
+                    <p class="signature-name">love ping <span class="heart">❤️</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reasons Section -->
+        <section id="reasons" class="section">
+            <div class="container">
+                <h2>Reasons Why I Love You</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <span class="reason-number">1</span>
+                        <p>You have the most beautiful and genuine smile that lights up not just my day, but my entire life. When you smile at me, I feel like the luckiest person in the world.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">2</span>
+                        <p>Your heart is pure gold. Your kindness and compassion toward everyone around you inspire me to be a better person every single day. You make the world a brighter place.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">3</span>
+                        <p>You have the most infectious laugh and an amazing sense of humor that makes even the darkest days feel light and joyful. You know exactly how to make me smile when I'm feeling down.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">4</span>
+                        <p>Your unwavering support and belief in me means everything. You stand by my side through every challenge and celebrate every victory with genuine joy. You're my greatest cheerleader.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">5</span>
+                        <p>You are not just my lover, but my best friend and soulmate. I can be completely myself with you, and you accept me with all my flaws and imperfections. That's truly rare and precious.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">6</span>
+                        <p>Being with you feels like coming home. In your arms, I feel safe, loved, and at peace. Every moment with you is where I want to be for the rest of my life.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">7</span>
+                        <p>Your dreams and ambitions inspire me to reach for the stars. Watching you pursue your goals with such passion and determination makes me want to be the best version of myself.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">8</span>
+                        <p>You love me for exactly who I am, not who you want me to be. You see the real me, and you choose to love me anyway. That unconditional love is the greatest gift I could ever receive.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">9</span>
+                        <p>Your presence alone brings me peace and calm. When life gets chaotic, just being near you makes everything feel manageable. You are my sanctuary, my safe haven.</p>
+                    </div>
+                    <div class="reason-card">
+                        <span class="reason-number">10</span>
+                        <p>With every passing day, I fall deeper in love with you. Not just because of who you are, but because of who you make me become. You are my forever, my always, my everything.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with love for you 💜💙</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
